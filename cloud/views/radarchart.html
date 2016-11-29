@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>radar chart</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+</head>
+<body>
+<canvas id="myChart" width=1300 height=700></canvas>
+<script>
+
+
+    var ctx = document.getElementById("myChart");
+        var myRadarChart = new Chart(ctx, {
+        type: 'radar',
+        data:
+            {
+                labels: ["spontaneous", "cautious investor", "methodical investor", "individualist"],
+                datasets: [
+                    {
+                        label: "WHat kind of investor you are？",
+                        backgroundColor: "rgba(179,181,198,0.2)",
+                        borderColor: "#35ff1b",
+                        pointBackgroundColor: "rgba(179,181,198,1)",
+                        pointBorderColor: "#fff",
+                        pointHoverBackgroundColor: "#fff",
+                        pointHoverBorderColor: "rgba(179,181,198,1)",
+                        data: [65, 56, 55, 60]
+                    },
+                ]
+            },
+            options: {
+                responsive: false
+            },
+    });
+    </script>
+
+
+    </body>
+</html>
